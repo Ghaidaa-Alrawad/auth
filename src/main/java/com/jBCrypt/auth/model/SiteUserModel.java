@@ -1,9 +1,9 @@
 package com.jBCrypt.auth.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.AbstractList;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class SiteUserModel {
@@ -12,9 +12,14 @@ public class SiteUserModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(nullable = false)
     private String username;
 
+    @Column(nullable = false)
     private String password;
+
+    @OneToMany(mappedBy = "userId", cascade = CascadeType.ALL)
+    private List<PostModel> posts;
 
     public SiteUserModel(String username, String password) {
         this.username = username;
@@ -45,5 +50,13 @@ public class SiteUserModel {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public List<PostModel> getPosts() {
+        return posts;
+    }
+
+    public void setPosts(List<PostModel> posts) {
+        this.posts = posts;
     }
 }

@@ -1,0 +1,94 @@
+body {
+    font-family: 'Caveat', cursive;
+    font-size: 24px;
+    background-color: rgba(147, 177, 166, 0.2);
+    margin: 0;
+    padding: 0;
+}
+
+.firstContainer{
+display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+textarea {
+  background: rgba(147, 177, 166, 0.2);
+    border: 1px solid rgb(4, 13, 18);
+}
+
+.nameDiv{
+text-align: center;
+padding: 50px 0;
+font-size: 36px;
+}
+
+.post-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.post-box {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: calc(33.33% - 20px);
+    box-sizing: border-box;
+}
+
+.headers {
+    text-align: center;
+}
+
+.post-form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.post-label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.post-textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+}
+
+.post-submit-button {
+  display: block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: rgb(92, 131, 116);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.post-submit-button:hover {
+  background-color: rgb(147, 177, 166);
+}
+
+.logout-button {
+  display: block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: rgb(147, 177, 166);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background-color: rgb(92, 131, 116);
+
+}

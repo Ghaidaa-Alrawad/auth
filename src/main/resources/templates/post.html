@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="">
+<head>
+    <meta charset="UTF-8">
+    <title>Posts Page</title>
+    <link rel="stylesheet" href="/Css/post.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!--<h1>There is no Posts yet :)</h1>-->
+<div class="firstContainer">
+    <p>Do you want to logOut?</p>
+    <form action="/logout" method="POST" class="logout-form">
+        <input type="submit" value="Log Out" class="logout-button">
+    </form>
+</div>
+
+<div th:text="'Hey there ' + ${username} + ' ! :)'" class="nameDiv"></div>
+
+<div>
+    <h1 class="headers">Posts</h1>
+    <div class="post-container" th:each="post : ${posts}">
+        <div class="post-box">
+            <p th:text="${post.textContent}"></p>
+        </div>
+    </div>
+</div>
+
+<h2 class="headers">Create a New Post</h2>
+<form method="post" action="/post/createPosts" class="post-form">
+    <label for="textContent" class="post-label">Post Content:</label>
+    <textarea id="textContent" name="textContent" rows="4" cols="50" required class="post-textarea"></textarea>
+    <br>
+    <button type="submit" value="Create Post" class="post-submit-button">Submit</button>
+</form>
+</body>
+</html>

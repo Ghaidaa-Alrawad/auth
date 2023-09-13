@@ -1,0 +1,46 @@
+body {
+    font-family: 'Caveat', cursive;
+    font-size: 24px;
+    background-color: rgba(147, 177, 166, 0.2);
+    margin: 0;
+    padding: 0;
+}
+
+.login-form {
+    text-align: center;
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 5px;
+    color: rgb(23, 107, 135);
+}
+
+.form-input {
+    width: 50%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #183D3D;
+    border-radius: 5px;
+}
+
+.form-button {
+    background-color: rgb(24, 61, 61);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-button:hover {
+    background-color: rgb(147, 177, 166);
+}
+
+.firstDiv{
+text-align: center;
+padding: 50px 0;
+font-size: 36px;
+}
